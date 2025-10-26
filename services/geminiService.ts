@@ -1,4 +1,5 @@
 
+
 import { GoogleGenAI } from "@google/genai";
 import * as pdfjsLib from 'pdfjs-dist/build/pdf';
 import { GEMINI_EXTRACTION_PROMPT, GEMINI_RESPONSE_SCHEMA } from '../constants';
@@ -11,8 +12,7 @@ import { ExtractedPOData } from '../types';
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://aistudiocdn.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.js`;
 
 
-// FIX: Per coding guidelines, the API key must be sourced from `process.env.API_KEY`.
-// This environment variable is assumed to be properly configured in the deployment environment.
+// FIX: The API key must be retrieved from `process.env.API_KEY` per coding guidelines, which resolves the TypeScript error for `import.meta.env`.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 async function fileToGenerativePart(file: File) {
