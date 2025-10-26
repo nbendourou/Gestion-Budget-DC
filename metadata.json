@@ -1,0 +1,5 @@
+{
+  "name": "Gestion Budgétaire et Suivi des Commandes à déployer",
+  "description": "Une application web pour gérer des projets, suivre les budgets, analyser les dépenses et les gains, et extraire automatiquement les informations de bons de commande (BC) au format PDF grâce à l'API Google Gemini.",
+  "requestFramePermissions": []
+}
